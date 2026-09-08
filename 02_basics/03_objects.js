@@ -53,9 +53,36 @@ const users = [
 ]
 users[1].email // email of 1st user index
 
-console.log(user);
-console.log(Object.keys(user)); // returns array of user keys
-console.log(Object.values(user)); // returns array of user values
-console.log(Object.entries(user)); // array in array of key value
+// console.log(user);
+// console.log(Object.keys(user)); // returns array of user keys
+// console.log(Object.values(user)); // returns array of user values
+// console.log(Object.entries(user)); // array in array of key value
 
-console.log(user.hasOwnProperty("isMale")); // checks if the key exists
+// console.log(user.hasOwnProperty("isMale")); // checks if the key exists
+
+
+// Object de-structuring --------------------------
+
+const course = {
+    courseName : "Data Science",
+    price: "99999",
+    courseInstructor : "Many"
+}
+
+// course.courseInstructor // we know this way
+
+// const {courseInstructor} = course
+// console.log(courseInstructor);
+
+const {courseInstructor: instructor} = course
+console.log(instructor);
+
+// API - in simple words -- apna kaam kisi or ke sir pe daalna
+
+// API comes in object form / JSON-same as object 
+
+// {
+//     "name":"546ckjhd",
+//     "mail": "ashiu@fchs.com",
+//     "call": "987651"
+// }
