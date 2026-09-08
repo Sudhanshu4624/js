@@ -38,3 +38,26 @@ const myfun = function(){
 }
 
 console.log(typeof _____); // get datatypes of any variable.
+
+// -----------------------------------------------------------------
+
+// Memory types --> Stack (Primitive) --> We get a copy of the var, Heap (non primitive) --> We get the reference of the var
+
+let var1 = "xyz"
+let var2 = var1
+
+var2 = "abc"
+console.log(var1); // --> remains unchanged since a copy is shared
+console.log(var2);
+
+let obj1 = {
+    mail: "asgd@kjsd.com",
+    contact: 987212
+}
+
+let obj2 = obj1
+
+obj2.mail = "og@mail.com"
+
+console.log(obj2.mail);
+console.log(obj1.mail); // --> gets changed as well since reference of the data is given
