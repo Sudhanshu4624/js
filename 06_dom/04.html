@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Final</title>
+</head>
+<body style="background-color: black; color: bisque;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addList(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addList('python')
+    addList('java')
+
+    // Optimized way! in previous function we were traversing the whole tree all over again and again, here we are directly creating a childnode w/o going thru the whole tree. 
+    function addOptiList(langName) { // prefered approach for bigger projects.
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOptiList('R')
+
+    // Edit
+    const secondLang = document.querySelector('li:nth-child(2)')
+    // secondLang.innerHTML = "Python" // again not recommended to use innerHTML/innerText
+
+    const newLi = document.createElement('li')
+    newLi.textContent = "Python using JupyterLabs"
+    secondLang.replaceWith(newLi)
+
+    //Edit
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li> Typescript </li>'
+
+    //remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
