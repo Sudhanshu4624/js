@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body style="background-color: black; color: bisque;">
+    
+</body>
+<script>
+    
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = 'main'
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.style.backgroundColor = 'skyblue'
+    div.style.padding = '11px'
+    div.style.borderRadius = '15px'
+    div.style.color = 'purple'
+    div.setAttribute('title','need some title')
+    
+    // div.innerText = "Text for test"
+    const addtext = document.createTextNode("Text for testing")
+    div.appendChild(addtext)
+    
+    document.body.appendChild(div)
+
+    function createDiv(bg_color, color, text) {
+        const div = document.createElement('div')
+        console.log(div);
+        div.className = 'main'
+        div.id = Math.round(Math.random() * 10 + 1)
+        div.style.backgroundColor = bg_color
+        div.style.padding = '11px'
+        div.style.borderRadius = '15px'
+        div.style.color = color
+        div.setAttribute('title','need some title')
+        
+        // div.innerText = "Text for test"
+        const addtext = document.createTextNode(text)
+        div.appendChild(addtext)
+
+        document.body.appendChild(div)
+    }
+
+    
+    createDiv('blue','black','lets goooo')
+
+    arrayList = [['green','purple','Text one'],['yellow','red','Text two'],['orange','blue','Text three'],['lightgray','darkgray','Text four']]
+
+    arrayList.forEach(e => {
+        createDiv(e[0],e[1],e[2])
+    });
+
+</script>
+</html>
