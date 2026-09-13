@@ -46,7 +46,7 @@
     //     console.log("google clicked");
     // }, false)
    
-    
+    // remove the image on click, not the link. thus we use the tagname img.
     document.querySelector('#images').addEventListener('click', function(e){
         console.log(e.target.tagName);
         if (e.target.tagName === 'IMG') {
