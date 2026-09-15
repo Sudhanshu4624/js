@@ -65,3 +65,6 @@ String.prototype.trueLength = function(){
 anotherUsername.trueLength()
 "hitesh".trueLength()
 "iceTea".trueLength()
+
+
+// this --> current execution context --> ishi context ko refer karne ke liye -> use this
